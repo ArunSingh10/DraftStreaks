@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.fragment.MockDraftFragment.mockDraftTab.WinningsDraftFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/textBeThefirst"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_be_the_first"
+            android:textSize="@dimen/_11ssp"
+            android:textColor="@color/colorLightSliver"
+            android:textAllCaps="false"
+            android:singleLine="true"
+            android:paddingVertical="@dimen/_5sdp"
+            android:elegantTextHeight="true"
+            android:textIsSelectable="false"
+            android:fontFamily="@font/segoebold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardWin"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@color/colorDeepSlateGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textBeThefirst">
+
+            <TextView
+                android:id="@+id/Rank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_rank"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/colorSky"
+                android:textAllCaps="false"
+                android:elegantTextHeight="true"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/segoebold"
+                android:paddingHorizontal="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="start"
+                app:layout_constraintEnd_toStartOf="@id/winning"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_weight="1"/>
+
+
+            <TextView
+                android:id="@+id/winning"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_winning"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/colorSky"
+                android:textAllCaps="false"
+                android:elegantTextHeight="true"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/segoebold"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@id/Rank"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/winDraftRecycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cardWin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

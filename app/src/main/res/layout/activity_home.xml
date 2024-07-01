@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.activtiy.homeActivity.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorDrawerBg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fitsSystemWindows="true">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/mainToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:elevation="0dp"
+                    android:background="@color/colorPrimaryCharcoalStatusBarHome"
+                    app:layout_scrollFlags="scroll|enterAlways|snap"
+                    app:layout_constraintVertical_weight="0.1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/frameLayout">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/toolBarProfiles"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:padding="3dp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:visibility="visible"
+                            app:cardCornerRadius="@dimen/_18sdp"
+                            app:strokeColor="@color/colorWhite"
+                            app:strokeWidth="@dimen/_1sdp"
+                            tools:ignore="UnusedAttribute"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+
+                            <ImageView
+                                android:id="@+id/homeProfileViews"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/app_name"
+                                android:scaleType="centerCrop"
+                                android:onClick="navHeaderToolBarProfilesClickEvent"
+                                android:src="@drawable/image_userpic_drawer"
+                                tools:ignore="ContentDescription"
+                                />
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <ImageView
+                            android:id="@+id/parentToolBarLogo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/image_streak"
+                            tools:ignore="NotSibling"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                        <ImageView
+                            android:id="@+id/parentImagebell"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            app:srcCompat="@drawable/image_bell"
+                            tools:ignore="ContentDescription"
+                            app:layout_constraintEnd_toStartOf="@id/toolBarProfiles"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <ImageView
+                            android:id="@+id/parentImageWallets"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            app:srcCompat="@drawable/image_wallet"
+                            tools:ignore="ContentDescription"
+                            app:layout_constraintEnd_toStartOf="@id/parentImagebell"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutCenterToolText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryCharcoalStatusBarHome"
+                            android:padding="@dimen/_10sdp"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toTopOf="@id/parentToolBarLogo"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/parentToolBarLogo"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:id="@+id/textCenterTooleBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Support"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_14ssp"
+                                android:textIsSelectable="false"
+                                android:elegantTextHeight="true"
+                                android:singleLine="true"
+                                android:gravity="center"
+                                android:fontFamily="@font/segoebold"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutToolBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryCharcoalStatusBarHome"
+                    android:padding="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/textTooleBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Moke Draft"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_14ssp"
+                        android:textIsSelectable="false"
+                        android:elegantTextHeight="true"
+                        android:singleLine="true"
+                        android:fontFamily="@font/segoebold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <!--  <FrameLayout
+                      android:id="@+id/mainNavHost"
+                      android:name="androidx.navigation.fragment.NavHostFragment"
+                      android:layout_width="match_parent"
+                      android:layout_height="0dp"
+                      app:layout_constraintVertical_weight="1"
+                      android:elevation="0dp"
+                      app:defaultNavHost="true"
+                      app:navGraph="@navigation/nav_graph_home"
+                      android:background="@color/colorWhite"
+                      app:layout_constraintTop_toBottomOf="@id/mainToolbar"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+                      />-->
+
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintVertical_weight="1"
+                    android:elevation="0dp"
+                    android:background="@color/colorWhite"
+                    app:layout_constraintTop_toBottomOf="@id/mainToolbar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+                    />
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottomNavigationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:elevation="@dimen/_2sdp"
+                    app:itemIconSize="@dimen/_18sdp"
+                    app:itemPaddingTop="@dimen/_10sdp"
+                    app:menu="@menu/bottom_items"
+                    app:itemIconTint="@color/colorWhite"
+                    app:labelVisibilityMode="labeled"
+                    app:layout_constraintVertical_weight="0.1"
+                    app:layout_constraintTop_toBottomOf="@id/frameLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/drawerNavView"
+                style="@style/Widget.Design.NavigationView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/colorDrawerBg"
+                app:headerLayout="@layout/nav_header_drawer">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_5sdp">
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutHelpSupport"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:background="@color/colorSky"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="@dimen/_50sdp">
+
+                        <ImageView
+                            android:id="@+id/helpAndSupportImg"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:elevation="@dimen/_3sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/image_helpsupport_drawer"
+                            tools:ignore="ContentDescription"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/helpText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_toEndOf="@id/helpAndSupportImg"
+                            android:fontFamily="@font/segoe"
+                            android:padding="@dimen/_2sdp"
+                            android:singleLine="true"
+                            android:text="@string/text_help_support"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12sdp"
+                            app:layout_constraintStart_toEndOf="@id/helpAndSupportImg"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/updateCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="start"
+                        android:elegantTextHeight="true"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/text_upto_date"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintTop_toBottomOf="@+id/textUpdateCode"
+                        app:layout_constraintStart_toStartOf="parent"/>
+
+
+                    <TextView
+                        android:id="@+id/textUpdateCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="start"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:text="@string/text_verification_code"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintTop_toBottomOf="@+id/layoutHelpSupport"
+                        app:layout_constraintStart_toStartOf="parent"/>
+                    <TextView
+                        android:id="@+id/textUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="start"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:lineSpacingExtra="@dimen/_2sdp"
+                        android:text="@string/text_update"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:textColor="@color/colorSky"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintTop_toBottomOf="@+id/layoutHelpSupport"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.navigation.NavigationView>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

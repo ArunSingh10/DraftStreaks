@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/colorDeepSlateGray">
+
+        <TextView
+            android:id="@+id/textRankValueLeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="#1"
+            android:gravity="start"
+            android:textColor="@color/colorLightSliver"
+            android:fontFamily="@font/segoe"
+            android:textSize="@dimen/_12ssp"
+            android:singleLine="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/layoutUser"
+            app:layout_constraintHorizontal_weight="0.4"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textPointLeaderValue"
+            app:layout_constraintStart_toEndOf="@id/textRankValueLeader"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1.1">
+            <ImageView
+                android:id="@+id/imagePlayerLeader"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/image_player_small"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textUser"
+                app:layout_constraintHorizontal_weight="1.1"/>
+
+            <TextView
+                android:id="@+id/textUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/text_player_name"
+                android:textColor="@color/colorLightSliver"
+                android:fontFamily="@font/segoe"
+                android:textSize="@dimen/_12ssp"
+                android:gravity="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textPointLeaderValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:gravity="center"
+            android:textColor="@color/colorLightSliver"
+            android:fontFamily="@font/segoe"
+            android:textSize="@dimen/_12ssp"
+            android:singleLine="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/layoutUser"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/textAmountLeaderValue"
+            app:layout_constraintHorizontal_weight="0.5"/>
+
+
+        <TextView
+            android:id="@+id/textAmountLeaderValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="$ 0"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:gravity="center"
+            android:textColor="@color/colorLightSliver"
+            android:fontFamily="@font/segoe"
+            android:textSize="@dimen/_12ssp"
+            android:singleLine="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textPointLeaderValue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.6"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

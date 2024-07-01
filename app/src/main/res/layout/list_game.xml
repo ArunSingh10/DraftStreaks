@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
+    android:background="@color/colorPrimaryCharcoalStatusBarHome">
+
+    <TextView
+        android:id="@+id/typeBasketBall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14ssp"
+        android:text="@string/text_basketball"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/segoebold"
+        android:drawablePadding="@dimen/_5sdp"
+        android:gravity="center|center_vertical"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_24sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableStartCompat="@drawable/image_basketball" />
+<!--    <TextView
+        android:id="@+id/footBallTab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12ssp"
+        android:text="@string/text_football"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/segoebold"
+        android:gravity="center|center_vertical"
+        app:drawableStartCompat="@drawable/image_basketball"
+        android:drawablePadding="@dimen/_5sdp"
+        android:paddingStart="@dimen/_30sdp"
+        android:paddingEnd="@dimen/_20sdp"
+        tools:ignore="UseCompatTextViewDrawableXml"
+        app:layout_constraintStart_toEndOf="@id/basketBallTab"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

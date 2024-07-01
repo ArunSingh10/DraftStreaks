@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.splash.UserGuideActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/laoutSkip"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/agencybold"
+            android:text="@string/text_skip"
+            android:gravity="end|center_vertical"
+            android:textColor="@color/colorSky"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/viewPagerUserSlider"
+            app:layout_constraintVertical_weight="0.5"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPagerUserSlider"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorTransparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/laoutSkip"
+            app:layout_constraintBottom_toTopOf="@id/tab_layout"
+            app:layout_constraintVertical_weight="9">
+        </androidx.viewpager.widget.ViewPager>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:tabBackground="@drawable/tab_select_dots"
+            app:tabGravity="start"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:tabIndicatorHeight="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonUserSlider"
+            app:layout_constraintTop_toBottomOf="@+id/viewPagerUserSlider"
+            app:layout_constraintVertical_weight="0.4"/>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_height="0dp"
+            android:id="@+id/buttonUserSlider"
+            style="@style/buttonContinue"
+            android:text="@string/text_continue"
+            tools:ignore="RtlSymmetry"
+            android:paddingEnd="@dimen/_30sdp"
+            android:paddingStart="@dimen/_25sdp"
+            android:backgroundTint="@color/colorSky"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_weight="0.9"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

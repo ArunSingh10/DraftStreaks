@@ -1,0 +1,93 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!--   <style name="Base.Theme.DraftStreaks" parent="Theme.Material3.DayNight.NoActionBar">
+        &lt;!&ndash; Customize your light theme here. &ndash;&gt;
+        &lt;!&ndash; <item name="colorPrimary">@color/my_light_primary</item> &ndash;&gt;
+    </style>-->
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorWhite</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/colorWhite</item>
+
+
+    </style>
+
+    <style name="HomeTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="colorPrimary">@color/colorPrimaryCharcoalStatusBarHome</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryCharcoalStatusBarHome</item>
+        <item name="colorOnPrimary">@color/colorWhite</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="colorAccent">@color/colorPrimaryCharcoalStatusBarHome</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/colorPrimaryCharcoalStatusBarHome</item>
+        <item name="android:navigationBarColor">@color/colorWhite</item>
+       <!-- <item name="toolbarStyle">@style/toolbar</item>-->
+
+    </style>
+
+    <style name="buttonContinue" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">@dimen/_130sdp</item>
+        <item name="android:layout_height">@dimen/_50sdp</item>
+        <item name="background">@null</item>
+        <item name="backgroundColor">@color/colorSkyBlue</item>
+        <item name="elevation">0dp</item>
+        <item name="drawableEndCompat">@drawable/right_arrow</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="fontFamily">@font/segoebold</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+
+    <style name="buttonSimple" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">@dimen/_130sdp</item>
+        <item name="android:layout_height">@dimen/_30sdp</item>
+        <item name="background">@null</item>
+        <item name="backgroundColor">@color/colorSkyBlue</item>
+        <item name="elevation">0dp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:elegantTextHeight">true</item>
+        <item name="fontFamily">@font/segoebold</item>
+    </style>
+
+    <style name="fullStatusBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/CustomDialogAnimation</item>
+
+    </style>
+
+    <style name="CustomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/animate_fade_enter</item>
+        <item name="android:windowExitAnimation">@anim/animate_fade_exit</item>
+
+    </style>
+
+    <style name="Theme.DraftStreaks" parent="Base.Theme.DraftStreaks" />
+    <!-- Base application theme. -->
+    <style name="Base.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
+</resources>

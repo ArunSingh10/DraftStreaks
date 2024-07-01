@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.joinContest.activity.playerAboutActivity.PlayerInfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/includeToolbar"
+            layout="@layout/tool_bar_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPlayerPhoto"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_120sdp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/colorLightSliver"
+            app:layout_constraintTop_toBottomOf="@id/includeToolbar"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            android:layout_marginTop="@dimen/_10sdp">
+
+
+            <ImageView
+                android:id="@+id/largePlayerPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/large_player_photo"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/app_name"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/playerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Alexandre Sarr"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/colorLightSliver"
+            android:fontFamily="@font/segoe"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:elegantTextHeight="true"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/cardPlayerPhoto"
+            tools:ignore="HardcodedText" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/playerDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/playerName">
+
+            <TextView
+                android:id="@+id/playerProfession"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Basket Ball Player "
+                android:textIsSelectable="false"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/colorLightSliver"
+                android:fontFamily="@font/segoe"
+                android:singleLine="true"
+                android:elegantTextHeight="true"
+                android:gravity="end"
+
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/playerView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="HardcodedText"
+                app:layout_constraintHorizontal_weight="1"/>
+            <View
+                android:id="@+id/playerView"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:background="@color/colorLightSliver"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/playerBelongCountry"
+                app:layout_constraintStart_toEndOf="@id/playerProfession"
+                app:layout_constraintHorizontal_weight="0.2"/>
+            <TextView
+                android:id="@+id/playerBelongCountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="France"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/colorLightSliver"
+                android:fontFamily="@font/segoe"
+                android:singleLine="true"
+                android:elegantTextHeight="true"
+                android:gravity="start"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                app:layout_constraintStart_toEndOf="@id/playerView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="0.7"
+                tools:ignore="HardcodedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/playerDesc"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:cardBackgroundColor="@color/colorDeepSlateGray"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            android:layout_marginVertical="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_7sdp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/_2sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textHeight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_height"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/_12sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/heightValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        />
+
+                    <TextView
+                        android:id="@+id/heightValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="7'1"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:fontFamily="@font/segoe"
+                        app:layout_constraintStart_toEndOf="@id/textHeight"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textPosition"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+                    <TextView
+                        android:id="@+id/textPosition"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Position"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="end"
+                        android:paddingEnd="@dimen/_6sdp"
+                        app:layout_constraintStart_toEndOf="@id/heightValue"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textPositionValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+                    <TextView
+                        android:id="@+id/textPositionValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="SF"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:fontFamily="@font/segoe"
+                        android:paddingStart="@dimen/_10sdp"
+                        app:layout_constraintStart_toEndOf="@id/textPosition"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardHomeTown"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:background="@color/colorDrawerUserPcBg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardHeight">
+
+                    <TextView
+                        android:id="@+id/textHomeTown"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Home Town"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/homeTownValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+                    <TextView
+                        android:id="@+id/homeTownValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bordeaux, France"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:fontFamily="@font/segoe"
+                        app:layout_constraintStart_toEndOf="@id/textHomeTown"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textBigBoard"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/textBigBoard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Big Board"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="end"
+                        app:layout_constraintStart_toEndOf="@id/homeTownValue"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textBigBoardValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+                    <TextView
+                        android:id="@+id/textBigBoardValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="32"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:fontFamily="@font/segoe"
+                        android:paddingStart="@dimen/_10sdp"
+                        app:layout_constraintStart_toEndOf="@id/textBigBoard"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardMockDraft"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardHomeTown">
+
+                    <TextView
+                        android:id="@+id/textMockDraft"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="MockDraft"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/mockDraftValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.4"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+                    <TextView
+                        android:id="@+id/mockDraftValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="31"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/_13sdp"
+                        android:fontFamily="@font/segoe"
+                        app:layout_constraintStart_toEndOf="@id/textMockDraft"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textDOB"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.6"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/textDOB"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="DOB"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="end"
+                        android:paddingEnd="@dimen/_6sdp"
+                        app:layout_constraintStart_toEndOf="@id/mockDraftValue"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textDOBValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.6"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+                    <TextView
+                        android:id="@+id/textDOBValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Oct 29, 2001"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_9ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:fontFamily="@font/segoe"
+                        android:paddingStart="@dimen/_10sdp"
+                        app:layout_constraintStart_toEndOf="@id/textDOB"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardAgeinYears"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    android:background="@color/colorDrawerUserPcBg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardMockDraft">
+
+                    <TextView
+                        android:id="@+id/textAgeinYears"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Age in Years"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/ageinYearsValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+                    <TextView
+                        android:id="@+id/ageinYearsValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="18"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:fontFamily="@font/segoe"
+                        app:layout_constraintStart_toEndOf="@id/textAgeinYears"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textWeight"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/textWeight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Weight"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="end"
+                        android:paddingEnd="@dimen/_7sdp"
+                        app:layout_constraintStart_toEndOf="@id/ageinYearsValue"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textWeightValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+                    <TextView
+                        android:id="@+id/textWeightValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="216 LBS"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:fontFamily="@font/segoe"
+                        android:paddingStart="@dimen/_10sdp"
+                        app:layout_constraintStart_toEndOf="@id/textWeight"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cardHighSchool"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingVertical="@dimen/_4sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardAgeinYears">
+
+                    <TextView
+                        android:id="@+id/textHighSchool"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="High School"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/_4sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/highSchoolValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.5"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+                    <TextView
+                        android:id="@+id/highSchoolValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Sunrise Christian Academy"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAllCaps="false"
+                        android:gravity="start"
+                        android:paddingStart="@dimen/_7sdp"
+                        android:fontFamily="@font/segoe"
+                        app:layout_constraintStart_toEndOf="@id/textHighSchool"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textDraftAge"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/textDraftAge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Draft Age"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_7ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="end"
+                        android:paddingStart="@dimen/_3sdp"
+                        app:layout_constraintStart_toEndOf="@id/highSchoolValue"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textDraftAgetValue"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+
+                    <TextView
+                        android:id="@+id/textDraftAgetValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="......"
+                        android:textColor="@color/colorLightSliver"
+                        android:textSize="@dimen/_10ssp"
+                        android:textAllCaps="false"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:gravity="start"
+                        android:fontFamily="@font/segoe"
+                        android:paddingStart="@dimen/_10sdp"
+                        app:layout_constraintStart_toEndOf="@id/textDraftAge"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_weight="0.49"
+                        tools:ignore="HardcodedText,RtlSymmetry"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textPlayerAboutDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="About Alexandre Sarr"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/colorLightSliver"
+            android:textAllCaps="false"
+            android:textIsSelectable="false"
+            android:fontFamily="@font/segoebold"
+            android:textStyle="bold"
+            android:elegantTextHeight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/cardMain"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"/>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textPlayerAboutDesc"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sarr spent part of this season sidelined with a hip injury but is back now and looking like a real candidate to go first in this draft. He's a 7-1, high-energy, versatile frontcourt prospect from France who can switch onto smaller players and also rim-protect. Think Jaren Jackson Jr. but without the established 3-point shot. Is Sarr a can't-miss prospect? No. But he would be a nice fit in Detroit next to Jalen Duren and could become the piece that ultimately returns the Pistons to respectability."
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/colorLightSliver"
+                android:textAllCaps="false"
+                android:nestedScrollingEnabled="true"
+                android:fillViewport="true"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/segoe"
+                android:elegantTextHeight="true"
+                tools:ignore="HardcodedText"
+                />
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_15sdp"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_15sdp"
+            />
+        <!--    <androidx.constraintlayout.widget.Group
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="layoutContestFrame" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

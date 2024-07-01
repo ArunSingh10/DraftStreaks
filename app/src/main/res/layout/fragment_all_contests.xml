@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.joinContest.fragment.JoinContest.tabJoinContest.AllContestsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardShortBy"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/colorShortbyBg"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/layoutMega"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/shortBy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/segoe"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Sort By :"
+                    android:textColor="@color/colorLightSliver"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/layoutEntry"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/layoutEntry"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/segoe"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:text="Entry"
+                    android:textColor="@color/colorLightSliver"
+                    android:textSize="@dimen/_10sdp"
+                    android:contentDescription="@string/app_name"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/layoutSpots"
+                    app:layout_constraintHorizontal_weight="0.7"
+                    app:layout_constraintStart_toEndOf="@id/shortBy"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/layoutSpots"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:fontFamily="@font/segoe"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:text="Spots"
+                    android:textColor="@color/colorLightSliver"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/layoutPricePool"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/layoutEntry"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/layoutPricePool"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/segoe"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:contentDescription="@string/app_name"
+                    android:text="Price Pool"
+                    android:textColor="@color/colorLightSliver"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/layoutAllFilter"
+                    app:layout_constraintHorizontal_weight="1.5"
+                    app:layout_constraintStart_toEndOf="@id/layoutSpots"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+<!--
+
+                <TextView
+                    android:id="@+id/layoutWinnerPercnt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:fontFamily="@font/segoe"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="% Winners"
+                    android:textColor="@color/colorLightSliver"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:layout_constraintStart_toEndOf="@id/layoutPricePool"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+-->
+
+
+                <ImageView
+                    android:id="@+id/layoutAllFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:contentDescription="@string/app_name"
+                    android:gravity="center"
+                    android:src="@drawable/image_funnel"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_weight="0.5"
+                    app:layout_constraintStart_toEndOf="@id/layoutPricePool"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutMega"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorDarkTurquoise"
+            android:padding="@dimen/_10sdp"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintBottom_toTopOf="@id/imageTrophyContest"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/cardShortBy"
+            app:layout_constraintVertical_weight="1.2">
+
+            <TextView
+                android:id="@+id/textMega"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/agencybold"
+                android:text="@string/text_nba"
+                android:textColor="@color/colorWhite"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/_14ssp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/timeDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/segoe"
+                android:text="11:15 PM 20 Sep 2024"
+                android:textColor="@color/colorLightSliver"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageTrophyContest"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="center"
+            android:src="@drawable/image_trophy"
+            app:layout_constraintVertical_weight="1"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintBottom_toTopOf="@id/recyclerMegaContest"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/layoutMega"/>
+        <TextView
+            android:id="@+id/megaContest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/segoebold"
+            android:text="Mega Contest"
+            android:textColor="@color/colorLightSliver"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_12ssp"
+           app:layout_constraintTop_toTopOf="@id/imageTrophyContest"
+            app:layout_constraintStart_toEndOf="@id/imageTrophyContest"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@id/imageTrophyContest"
+            tools:ignore="HardcodedText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMegaContest"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_13sdp"
+            app:layout_constraintBottom_toTopOf="@id/buttonCreateLeague"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/imageTrophyContest"
+            app:layout_constraintVertical_weight="12" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonCreateLeague"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/text_create_contest"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/segoebold"
+            android:background="@drawable/stroke_with_otp_bg"
+            android:backgroundTint="@color/colorSky"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerMegaContest"
+            app:layout_constraintEnd_toStartOf="@id/buttonJoinContest"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="1"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonJoinContest"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/stroke_with_otp_bg"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:text="@string/text_join_contest"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/colorSky"
+            android:fontFamily="@font/segoebold"
+            android:layout_marginBottom="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/buttonCreateLeague"
+            app:layout_constraintStart_toEndOf="@id/buttonCreateLeague"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="0.07"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_15sdp"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_15sdp"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorDrawerBg"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardlayoutStroke"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/card_skyblue_stroke_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:elevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoebold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/text_user_name_superhero"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layoutImage"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="3dp"
+            android:layout_marginTop="-95dp"
+            android:visibility="visible"
+            tools:ignore="UnusedAttribute"
+            app:cardElevation="0dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="navHeaderUserProfileClickEvent"
+            app:cardCornerRadius="@dimen/_25sdp"
+            app:layout_constraintTop_toBottomOf="@id/cardlayoutStroke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:id="@+id/homeProfileView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_userpic_drawer"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/itemIcons"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/app_name"
+            android:onClick="walletBtnClickEvent"
+            android:src="@drawable/wallet_drawer"
+            app:layout_constraintStart_toStartOf="@id/cardlayoutStroke"
+            app:layout_constraintTop_toBottomOf="@id/cardlayoutStroke"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+                    android:id="@+id/itemText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:singleLine="true"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/segoe"
+                    android:text="@string/text_mybalance"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="@id/itemIcons"
+                    app:layout_constraintBottom_toTopOf="@id/itemReferIcons"
+                    app:layout_constraintTop_toBottomOf="@id/itemIcons"/>
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardAddCash"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorSky"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_20sdp"
+    app:layout_constraintEnd_toEndOf="@id/cardlayoutStroke"
+    app:layout_constraintTop_toBottomOf="@id/cardlayoutStroke">
+
+    <TextView
+        android:id="@+id/addWalletAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/segoe"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:onClick="navHeaderLayoutBalanceClickEvent"
+        android:text="@string/text_add_cash"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/_12ssp"
+        tools:ignore="RelativeOverlap"
+       />
+
+</androidx.cardview.widget.CardView>
+           <!--     <TextView
+                    android:id="@+id/addWalletAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/segoe"
+                    android:backgroundTint="@color/colorSky"
+                    android:background="@drawable/background_sky"
+                    android:gravity="center"
+                    android:onClick="navHeaderLayoutBalanceClickEvent"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/text_add_cash"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12ssp"
+                    tools:ignore="RelativeOverlap"
+                    app:layout_constraintEnd_toEndOf="@id/cardlayoutStroke"
+                    app:layout_constraintTop_toBottomOf="@id/cardlayoutStroke"/>-->
+
+                <TextView
+                    android:id="@+id/textBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:onClick="navHeaderLayoutBalanceClickEvent"
+                    android:singleLine="true"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/segoebold"
+                    android:text="@string/text_balance_value"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toTopOf="@id/cardInvite"
+                    app:layout_constraintTop_toBottomOf="@id/cardAddCash"
+                    app:layout_constraintEnd_toEndOf="@id/cardAddCash"/>
+
+            <ImageView
+                android:id="@+id/itemReferIcons"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/image_refer_earn"
+                app:tint="@color/colorWhite"
+                android:layout_marginTop="@dimen/_5sdp"
+                tools:ignore="ContentDescription"
+                app:layout_constraintTop_toBottomOf="@id/itemText"
+                app:layout_constraintStart_toStartOf="@id/itemText"
+                app:layout_constraintBottom_toTopOf="@id/recyclerDrawer"
+                />
+        <TextView
+            android:id="@+id/itemReferText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/segoe"
+            android:padding="1dp"
+            android:singleLine="true"
+            android:elegantTextHeight="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="start|center_vertical"
+            android:text="@string/text_refer_earn"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@id/itemReferIcons"
+            app:layout_constraintTop_toBottomOf="@id/itemText"
+            app:layout_constraintBottom_toTopOf="@id/recyclerDrawer" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardInvite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSky"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="@id/itemReferText"
+            app:layout_constraintEnd_toEndOf="@id/textBalance">
+
+            <TextView
+                android:id="@+id/textInvite"
+                android:layout_width="@dimen/_67sdp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoe"
+                android:gravity="center"
+                android:onClick="navHeaderLayoutInviteClickEvent"
+                android:paddingVertical="@dimen/_4sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:text="@string/text_invite"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="RelativeOverlap" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/drawer_list"
+            app:layout_constraintTop_toBottomOf="@id/itemReferIcons"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

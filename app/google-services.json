@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "512238655911",
+    "project_id": "draftstreaks-d80ef",
+    "storage_bucket": "draftstreaks-d80ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512238655911:android:024327aeb48ccee7127e82",
+        "android_client_info": {
+          "package_name": "com.example.draftstreaks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGXtDpIhnfI6GM8LO9kDqTMCsBTaRPi_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

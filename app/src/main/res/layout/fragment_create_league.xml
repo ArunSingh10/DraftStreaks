@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.joinContest.fragment.createLeague.CreateLeagueFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/createLeagueTabLayout"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        app:tabIndicatorGravity="bottom"
+        app:tabIndicatorHeight="0dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabGravity="fill"
+        android:contentDescription="@string/app_name"
+        android:elevation="0dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:background="@drawable/background_tab"
+        app:tabBackground="@drawable/background_select_tab_turquoise"
+        app:tabTextColor="@color/colorWhite"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:tabTextAppearance="@style/TextAppearanceTab"
+        app:tabRippleColor="@null"
+        app:tabInlineLabel="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideLine2"
+        app:layout_constraintStart_toStartOf="@id/guideLine1">
+    </com.google.android.material.tabs.TabLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createLeagueTabLayout">
+
+
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/createLeagueViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/contestFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="NotSibling" />
+            </androidx.viewpager.widget.ViewPager>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_15sdp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_15sdp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

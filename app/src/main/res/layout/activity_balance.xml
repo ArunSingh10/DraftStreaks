@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".addCash.BalanceActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/includeToolbar"
+            layout="@layout/tool_bar_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/balanceWallet"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:elevation="3dp"
+            android:src="@drawable/wallet_drawer"
+            android:contentDescription="@string/app_name"
+            tools:ignore="ContentDescription"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/includeToolbar"/>
+        <TextView
+            android:id="@+id/textBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/colorWhite"
+            android:text="$ 000"
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:elegantTextHeight="true"
+            android:textIsSelectable="false"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/segoebold"
+            app:layout_constraintStart_toEndOf="@id/balanceWallet"
+            app:layout_constraintTop_toBottomOf="@id/includeToolbar"/>
+        <TextView
+            android:id="@+id/textTotalBal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:text="@string/text_total_balance"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:elegantTextHeight="true"
+            android:textIsSelectable="false"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:fontFamily="@font/segoe"
+            app:layout_constraintStart_toEndOf="@id/balanceWallet"
+            app:layout_constraintTop_toBottomOf="@id/textBalance"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardWalletAddCash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/colorSky"
+            app:cardCornerRadius="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintTop_toBottomOf="@id/includeToolbar">
+
+            <TextView
+                android:id="@+id/addWalletAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/segoe"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@string/text_add_cash"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp"
+                tools:ignore="RelativeOverlap"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/cardAdded"
+           android:layout_width="0dp"
+           android:layout_height="@dimen/_50sdp"
+           app:cardBackgroundColor="@color/colorDrawerBg"
+           app:cardElevation="0dp"
+           app:cardCornerRadius="@dimen/_10sdp"
+           android:layout_marginTop="@dimen/_20sdp"
+           app:layout_constraintEnd_toEndOf="@id/guideLine2"
+           app:layout_constraintStart_toStartOf="@id/guideLine1"
+           app:layout_constraintTop_toBottomOf="@id/textTotalBal">
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_marginHorizontal="@dimen/_5sdp"
+               android:padding="@dimen/_6sdp">
+               <TextView
+                   android:id="@+id/addedAmount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="25dp"
+                   android:gravity="center|start"
+                   android:singleLine="true"
+                   android:layout_marginTop="@dimen/_5sdp"
+                   android:text="Amount Added(Unutilised)"
+                   android:textColor="@color/colorWhite"
+                   android:textSize="@dimen/_11ssp"
+                   android:fontFamily="@font/segoe"
+                   tools:ignore="HardcodedText"
+                   app:layout_constraintTop_toTopOf="parent"
+                   app:layout_constraintBottom_toTopOf="@id/imageAddedAmount"
+                   app:layout_constraintStart_toStartOf="parent"/>
+
+               <TextView
+                   android:id="@+id/textWalletAmount"
+                   android:layout_width="@dimen/_200sdp"
+                   android:layout_height="25dp"
+                   android:gravity="center|start"
+                   android:singleLine="true"
+                   android:text="$ 0"
+                   android:textColor="@color/colorWhite"
+                   android:textSize="@dimen/_12ssp"
+                   android:fontFamily="@font/segoe"
+                   tools:ignore="HardcodedText"
+                   android:layout_marginBottom="@dimen/_4sdp"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@id/addedAmount"
+                   app:layout_constraintBottom_toBottomOf="parent"/>
+               <ImageView
+                   android:id="@+id/imageAddedAmount"
+                   android:layout_width="20dp"
+                   android:layout_height="20dp"
+                   android:layout_gravity="center"
+                   android:contentDescription="@string/app_name"
+                   android:src="@drawable/image_information"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintTop_toTopOf="parent"/>
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+       </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardWinning"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            app:cardBackgroundColor="@color/colorDrawerBg"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/cardAdded">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:padding="@dimen/_6sdp">
+                <TextView
+                    android:id="@+id/textWinning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center|start"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/text_winning"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/segoe"
+                    tools:ignore="HardcodedText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageWin"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textWinningAmount"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="25dp"
+                    android:gravity="center|start"
+                    android:singleLine="true"
+                    android:text="$ 0"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/segoe"
+                    tools:ignore="HardcodedText"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textWinning"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <ImageView
+                    android:id="@+id/imageWin"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/image_information"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBounce"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            app:cardBackgroundColor="@color/colorDrawerBg"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/cardWinning">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:padding="@dimen/_6sdp">
+                <TextView
+                    android:id="@+id/textCAshBounce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:gravity="center|start"
+                    android:singleLine="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/text_cash_bounce"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_11ssp"
+                    android:fontFamily="@font/segoe"
+                    tools:ignore="HardcodedText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/imageBounce"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/textBounceAmount"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="25dp"
+                    android:gravity="center|start"
+                    android:singleLine="true"
+                    android:text="$ 0"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/segoe"
+                    tools:ignore="HardcodedText"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textCAshBounce"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+                <ImageView
+                    android:id="@+id/imageBounce"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/image_information"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTransaction"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:cardBackgroundColor="@color/colorDrawerBg"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/cardBounce"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            android:layout_marginTop="@dimen/_15sdp">
+            <ImageView
+                android:id="@+id/transactionImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_transaction_history"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textTransactionHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_transaction_history"
+            android:textAllCaps="false"
+            android:textIsSelectable="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14ssp"
+            android:singleLine="true"
+            android:fontFamily="@font/segoe"
+            android:elegantTextHeight="true"
+            android:layout_marginStart="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/cardTransaction"
+            app:layout_constraintTop_toTopOf="@id/cardTransaction"
+            app:layout_constraintBottom_toBottomOf="@id/cardTransaction"/>
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardManage"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:cardBackgroundColor="@color/colorDrawerBg"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@id/cardTransaction"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            android:layout_marginTop="@dimen/_15sdp">
+            <ImageView
+                android:id="@+id/manageImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image_manage_payment"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textManageHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_manage_payment"
+            android:textAllCaps="false"
+            android:textIsSelectable="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_14ssp"
+            android:singleLine="true"
+            android:fontFamily="@font/segoe"
+            android:elegantTextHeight="true"
+            android:layout_marginStart="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/cardManage"
+            app:layout_constraintTop_toTopOf="@id/cardManage"
+            app:layout_constraintBottom_toBottomOf="@id/cardManage"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_15sdp"
+            />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_15sdp"
+            />
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="balanceWallet,cardWalletAddCash" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

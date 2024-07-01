@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottomViewHomes"
+        android:enabled="true"
+        android:icon="@drawable/bottom_home_selector"
+        android:title="" />
+
+    <item
+        android:id="@+id/bottomViewWinners"
+        android:enabled="true"
+        android:icon="@drawable/bottom_winner_selector"
+        android:title="" />
+
+    <item
+        android:id="@+id/bottomViewMatches"
+        android:enabled="true"
+        android:icon="@drawable/bottom_matches_selector"
+        android:title=""/>
+
+    <item
+        android:id="@+id/bottomViewSupport"
+        android:enabled="true"
+        android:icon="@drawable/bottom_support_selector"
+        android:title="" />
+
+</menu>

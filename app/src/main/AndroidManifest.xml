@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.draftstreaks">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="33"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="33"
+        tools:ignore="ScopedStorage" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"
+        />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:name=".appSetting.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:debuggable="false"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="HardcodedDebugMode"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.signUp.SignUpActivity"
+            android:theme="@style/AppTheme"
+            android:exported="true" />
+        <activity
+            android:name=".ui.joinContest.activity.playerAboutActivity.PlayerInfoActivity"
+            android:exported="false"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.home.activtiy.winnerDetailActivity.WinnerDetailActivity"
+            android:exported="false"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.joinContest.activity.Scoreboard.ScoreBoardActivity"
+            android:exported="false"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.joinContest.activity.selectPlayerActvitiy.SelectPlayerActivity"
+            android:exported="false"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.joinContest.activity.createLeagueActivity.CreateLeagueActivity"
+            android:exported="true"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.home.activtiy.mockDraftActivity.MockDratfActivity"
+            android:exported="false"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.joinContest.activity.PrizePoolActivity"
+            android:exported="true"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.joinContest.activity.JoinContestActivity"
+            android:exported="true"
+            android:theme="@style/HomeTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".addCash.BalanceActivity"
+            android:exported="true"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".addCash.AddCashActivity"
+            android:exported="true"
+            android:theme="@style/HomeTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.home.activtiy.profile.UserProfileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_user_profile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ui.home.activtiy.homeActivity.HomeActivity"
+            android:exported="true"
+            android:theme="@style/HomeTheme" />
+        <activity
+            android:name=".ui.userName.UserNameActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.otpVerify.OtpVerificationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.login.LogInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.splash.UserGuideActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".appSetting.MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".appSetting.SmsBroadcastReceiver"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_SMS">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/image_streak" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimaryDark" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+    </application>
+
+</manifest>

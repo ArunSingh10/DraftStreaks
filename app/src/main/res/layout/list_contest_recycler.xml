@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+      android:background="@drawable/draft_bg">
+
+
+        <ImageView
+            android:id="@+id/layoutGroupPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image_player_group_pic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/layoutCenter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutCenter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:background="@drawable/image_home_black_crop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/layoutClub"
+            app:layout_constraintTop_toBottomOf="@id/layoutGroupPlayer"
+            app:layout_constraintVertical_weight="1">
+
+            <ImageView
+                android:id="@+id/imageDraft"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/image_draft_nba"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintTop_toTopOf="@id/Value"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textSportsType"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:text="@string/text_nba"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_5ssp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:elegantTextHeight="true"
+                app:layout_constraintTop_toBottomOf="@id/imageDraft"
+                app:layout_constraintBottom_toBottomOf="@id/Value"
+                app:layout_constraintStart_toStartOf="@id/imageDraft"
+                app:layout_constraintEnd_toEndOf="@id/imageDraft"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/Value"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    app:cardBackgroundColor="#3300C5FF"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:strokeColor="#3300C5FF"
+                    app:strokeWidth="@dimen/_1sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp">
+
+                        <TextView
+                            android:id="@+id/daysValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_15sdp"
+                            android:text="10"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10ssp"
+                            android:inputType="number"
+                            android:textAllCaps="false"
+                            android:textIsSelectable="false"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoebold"
+                            android:layout_marginHorizontal="@dimen/_3sdp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            />
+                        <TextView
+                            android:id="@+id/textDays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Days"
+                            android:textSize="@dimen/_7ssp"
+                            android:textColor="@color/colorWhite"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/segoe"
+                            android:singleLine="true"
+                            android:gravity="top"
+                            android:paddingBottom="@dimen/_1sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/daysValue"
+                            app:layout_constraintEnd_toEndOf="@id/daysValue"
+                            app:layout_constraintTop_toBottomOf="@id/daysValue"/>
+
+                        <View
+                            android:id="@+id/view0"
+                            android:layout_width="2dp"
+                            android:layout_height="25dp"
+                            android:background="@color/colorWhite"
+                            android:alpha="0.5"
+                            app:layout_constraintStart_toEndOf="@id/textDays"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            app:layout_constraintTop_toTopOf="@id/daysValue"
+                            app:layout_constraintBottom_toBottomOf="@id/textDays"/>
+
+                        <TextView
+                            android:id="@+id/hoursValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_15sdp"
+                            android:text="30"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10ssp"
+                            android:inputType="number"
+                            android:textAllCaps="false"
+                            android:textIsSelectable="false"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoebold"
+                            android:layout_marginHorizontal="@dimen/_10sdp"
+                            app:layout_constraintStart_toEndOf="@id/view0"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+                        <TextView
+                            android:id="@+id/textHours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hours"
+                            android:textSize="@dimen/_7ssp"
+                            android:textColor="@color/colorWhite"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/segoe"
+                            android:singleLine="true"
+                            android:gravity="top"
+                            android:paddingBottom="@dimen/_1sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/hoursValue"
+                            app:layout_constraintEnd_toEndOf="@id/hoursValue"
+                            app:layout_constraintTop_toBottomOf="@id/hoursValue"
+                            tools:ignore="HardcodedText" />
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="2dp"
+                            android:layout_height="25dp"
+                            android:background="@color/colorWhite"
+                            android:alpha="0.5"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            app:layout_constraintStart_toEndOf="@id/textHours"
+                            app:layout_constraintTop_toTopOf="@id/hoursValue"
+                            app:layout_constraintBottom_toBottomOf="@id/textHours"/>
+
+
+
+                        <TextView
+                            android:id="@+id/minutesValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_15sdp"
+                            android:text="50"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10ssp"
+                            android:inputType="number"
+                            android:textAllCaps="false"
+                            android:textIsSelectable="false"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoebold"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            app:layout_constraintStart_toEndOf="@id/view1"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/textMinutes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Minutes"
+                            android:textSize="@dimen/_7ssp"
+                            android:textColor="@color/colorWhite"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/segoe"
+                            android:singleLine="true"
+                            android:gravity="top"
+                            android:paddingBottom="@dimen/_1sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/minutesValue"
+                            app:layout_constraintEnd_toEndOf="@id/minutesValue"
+                            app:layout_constraintTop_toBottomOf="@id/minutesValue"
+                            tools:ignore="HardcodedText" />
+
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="2dp"
+                            android:layout_height="25dp"
+                            android:background="@color/colorWhite"
+                            android:alpha="0.5"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            app:layout_constraintStart_toEndOf="@id/textMinutes"
+                            app:layout_constraintTop_toTopOf="@id/minutesValue"
+                            app:layout_constraintBottom_toBottomOf="@id/textMinutes"/>
+
+
+                        <TextView
+                            android:id="@+id/secondValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_15sdp"
+                            android:text="50"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_10ssp"
+                            android:inputType="number"
+                            android:textAllCaps="false"
+                            android:textIsSelectable="false"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoebold"
+                           android:layout_marginStart="@dimen/_7sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            app:layout_constraintStart_toEndOf="@id/view2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            />
+
+                        <TextView
+                            android:id="@+id/textSeconds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seconds"
+                            android:textSize="@dimen/_7ssp"
+                            android:textColor="@color/colorWhite"
+                            android:textAllCaps="true"
+                            android:fontFamily="@font/segoe"
+                            android:singleLine="true"
+                            android:gravity="top"
+                            android:paddingBottom="@dimen/_1sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/secondValue"
+                            app:layout_constraintEnd_toEndOf="@id/secondValue"
+                            app:layout_constraintTop_toBottomOf="@id/secondValue"
+                            tools:ignore="HardcodedText" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/layoutClub"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            android:scaleType="centerInside"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/image_clib_group_pic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/card"
+            app:layout_constraintTop_toBottomOf="@id/layoutCenter"
+            app:layout_constraintVertical_weight="1"/>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            app:cardCornerRadius="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutClub"
+            app:layout_constraintVertical_weight="1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:paddingVertical="@dimen/_3sdp"
+                android:paddingHorizontal="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/pricePool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/text_prize_pool"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/colorSky"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textIsSelectable="false"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/segoe"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardBackgroundColor="#3300C5FF"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageBell"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/image_bell_sky"
+                        android:scaleType="fitCenter"/>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

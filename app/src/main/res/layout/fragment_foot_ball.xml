@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+tools:context=".ui.home.fragment.homeFragment.gamesTabFragment.FootBallFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/colorPrimaryDark">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/bannerFootballPager"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_59sdp"
+                app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                app:layout_constraintStart_toStartOf="@id/guideLine1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_9sdp"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toTopOf="@id/layoutUpcomingFootDraft">
+
+            </androidx.viewpager.widget.ViewPager>
+
+            <TextView
+                android:id="@+id/layoutUpcomingFootDraft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/agencybold"
+                android:gravity="center_vertical"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:paddingHorizontal="@dimen/_2sdp"
+                android:text="@string/text_upcoming_drafts"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="@id/guideLine1"
+                app:layout_constraintTop_toBottomOf="@id/bannerFootballPager"
+                app:layout_constraintBottom_toTopOf="@id/recycleContestFootball" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleContestFootball"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_2sdp"
+                app:layout_constraintStart_toStartOf="@id/guideLine1"
+                app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                app:layout_constraintTop_toBottomOf="@id/layoutUpcomingFootDraft">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLine1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_12sdp"
+                />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLine2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_12sdp"
+                />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="bannerFootballPager,layoutUpcomingFootDraft,recycleContestFootball" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

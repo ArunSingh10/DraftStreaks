@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.joinContest.fragment.prizePoolFragment.pointSystemFragment.pointSystemTab.FootballPointSystemFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+
+        <TextView
+            android:id="@+id/textStreaksFoot"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Streaks"
+            android:textSize="@dimen/_14ssp"
+            android:elegantTextHeight="true"
+            android:textColor="@color/colorLightSliver"
+            android:fontFamily="@font/segoebold"
+            android:textIsSelectable="false"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@color/colorDeepSlateGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textStreaksFoot">
+
+            <TextView
+                android:id="@+id/textTypeofpoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/segoebold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Type of point"
+                android:textColor="@color/colorSky"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textpoint"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/textpoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Point"
+                android:textColor="@color/colorSky"
+                android:textSize="@dimen/_12ssp"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/segoebold"
+                android:singleLine="true"
+                android:gravity="center"
+                android:elegantTextHeight="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textTypeofpoint"
+                app:layout_constraintHorizontal_weight="1"
+                tools:ignore="HardcodedText"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pointStreaksRecyclerFoot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textLayout">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/textBonusFoot"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Bonus"
+            android:textSize="@dimen/_14ssp"
+            android:elegantTextHeight="true"
+            android:textColor="@color/colorLightSliver"
+            android:fontFamily="@font/segoebold"
+            android:textIsSelectable="false"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pointStreaksRecyclerFoot"
+            tools:ignore="HardcodedText" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/textBonusLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@color/colorDeepSlateGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textBonusFoot">
+
+            <TextView
+                android:id="@+id/textTypeofPointBonus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Type of point"
+                android:textColor="@color/colorSky"
+                android:textSize="@dimen/_12ssp"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/segoebold"
+                android:singleLine="true"
+                android:gravity="center"
+                android:elegantTextHeight="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/textpointBonus"
+                app:layout_constraintHorizontal_weight="1"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/textpointBonus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Point"
+                android:textColor="@color/colorSky"
+                android:textSize="@dimen/_12ssp"
+                android:textIsSelectable="false"
+                android:fontFamily="@font/segoebold"
+                android:singleLine="true"
+                android:gravity="center"
+                android:elegantTextHeight="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textTypeofPointBonus"
+                app:layout_constraintHorizontal_weight="1"
+                tools:ignore="HardcodedText"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pointBonussRecyclerFoot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textBonusLayout">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

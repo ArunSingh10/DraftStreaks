@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".ui.signUp.SignUpActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardBackRegister"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="-27dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/colorCharcoalGray"
+            app:cardCornerRadius="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backArrowSky"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="60dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/back_sky_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fitsSystemWindows="true"
+                    android:fontFamily="@font/segoebold"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/text_back"
+                    android:textColor="@color/colorSky"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/_15ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/backArrowSky"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.487" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/halfBallRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="-25dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/half_ball_right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cardBackRegister" />
+
+        <TextView
+            android:id="@+id/tellUsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/agencybold"
+            android:singleLine="true"
+            android:text="@string/text_tellusnumber"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/halfBallRight" />
+
+        <TextView
+            android:id="@+id/contraryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoe"
+            android:text="@string/text_countrytopopular_random"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tellUsLayout"
+            app:layout_constraintTop_toBottomOf="@id/tellUsLayout" />
+
+        <TextView
+            android:id="@+id/enterNumberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoebold"
+            android:gravity="start"
+            android:singleLine="true"
+            android:text="@string/text_enter_your_mob"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="@id/contraryLayout"
+            app:layout_constraintTop_toBottomOf="@id/contraryLayout" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNumberLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            app:cardElevation="0dp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            app:cardBackgroundColor="@color/colorCharcoalGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/enterNumberLayout"
+            app:layout_constraintTop_toBottomOf="@id/enterNumberLayout">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCountryCodeLayout"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="@color/colorDeepAqua"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp">
+                        <TextView
+                            android:id="@+id/countryCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/text_countryCode_Value"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12ssp"
+                            android:textColor="@color/colorWhite"
+                            android:fontFamily="@font/segoe"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+                        <ImageView
+                            android:id="@+id/dropdownCountryCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/image_dropdown"
+                            android:contentDescription="@string/app_name"
+                            android:baseline="@dimen/_5sdp"
+                            app:layout_constraintStart_toEndOf="@id/countryCode"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layoutPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintHorizontal_weight="1"
+                    app:errorEnabled="false"
+                    app:hintEnabled="false"
+                    app:boxBackgroundMode="none"
+                    android:gravity="start|center_vertical"
+                    app:cursorColor="@color/colorWhite"
+                    app:passwordToggleEnabled="false"
+                    app:layout_constraintStart_toEndOf="@id/cardCountryCodeLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cursorVisible="true"
+                        android:background="@color/colorTransparent"
+                        android:focusable="true"
+                        android:digits="1234567890"
+                        android:inputType="phone"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:imeOptions="actionDone"
+                        android:importantForAutofill="no"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:text=""
+                        android:gravity="start|center_vertical"
+                        android:layout_gravity="center_vertical"
+                        android:textCursorDrawable="@drawable/background_cursor"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12sdp"
+                        tools:ignore="LabelFor,RtlSymmetry,TextFields">
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/layoutReciveOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_you_will_receiveotp"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/segoe"
+            android:textIsSelectable="false"
+            android:textAlignment="textStart"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:elegantTextHeight="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/cardNumberLayout"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/layoutRedirectLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/colorSky"
+            android:fontFamily="@font/segoebold"
+            android:textIsSelectable="false"
+            android:gravity="center"
+            android:elegantTextHeight="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="@id/layoutAllreadyHave"
+            app:layout_constraintTop_toTopOf="@id/layoutAllreadyHave"
+            app:layout_constraintStart_toEndOf="@id/layoutAllreadyHave"
+             />
+        <TextView
+            android:id="@+id/layoutAllreadyHave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/colorLightSliver"
+            android:fontFamily="@font/segoe"
+            android:textIsSelectable="false"
+            android:elegantTextHeight="true"
+            android:singleLine="true"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/buttonContinueSignUp"
+            app:layout_constraintStart_toStartOf="parent" />
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/materialCheckBox"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            app:checkedState="unchecked"
+            android:background="@color/colorTransparent"
+            android:backgroundTint="@null"
+            android:button="@drawable/custom_checkbox"
+            app:buttonIcon="@drawable/custom_checkbox"
+            app:buttonIconTint="@null"
+            android:layout_marginStart="@dimen/_11sdp"
+            app:layout_constraintTop_toBottomOf="@id/layoutReciveOtp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/layoutAboveAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:fontFamily="@font/segoe"
+            android:text="@string/text_above_age"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/materialCheckBox"
+            app:layout_constraintEnd_toEndOf="@id/layoutReciveOtp"
+            app:layout_constraintStart_toEndOf="@+id/materialCheckBox" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonContinueSignUp"
+            style="@style/buttonContinue"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:backgroundTint="@color/colorSky"
+            android:paddingStart="@dimen/_35sdp"
+            android:paddingEnd="@dimen/_30sdp"
+            android:text="SignUp"
+            app:layout_constraintStart_toStartOf="@id/materialCheckBox"
+            app:layout_constraintTop_toBottomOf="@id/layoutAboveAge"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/image_rugby_bottom"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

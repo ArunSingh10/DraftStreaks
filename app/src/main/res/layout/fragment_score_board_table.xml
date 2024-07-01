@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.joinContest.fragment.scoreBoard.ScoreBoardTableFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <include
+            android:id="@+id/includeToolbar"
+            layout="@layout/tool_bar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardscoreboardTable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/colorToolBar"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/includeToolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/txtTotalScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/segoe"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:singleLine="true"
+                    android:text="Total Score"
+                    android:textColor="@color/colorLightSliver"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/pickValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/segoebold"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="14"
+                    android:textColor="@color/colorSky"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtTotalScore" />
+
+                <TextView
+                    android:id="@+id/layoutPick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/segoe"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Pick"
+                    android:textColor="@color/colorLightSliver"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/pickValue" />
+
+                <TextView
+                    android:id="@+id/difficultyValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:fontFamily="@font/segoebold"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="1.4"
+                    android:textColor="@color/colorSky"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintEnd_toStartOf="@id/streakValue"
+                    app:layout_constraintStart_toEndOf="@id/pickValue"
+                    app:layout_constraintTop_toBottomOf="@id/txtTotalScore"
+
+                    />
+
+                <TextView
+                    android:id="@+id/layoutdifficulty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/segoe"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Difficulty Index"
+                    android:textColor="@color/colorLightSliver"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="@id/difficultyValue"
+                    app:layout_constraintTop_toBottomOf="@id/pickValue" />
+
+
+                <TextView
+                    android:id="@+id/streakValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/segoebold"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="0.9"
+                    android:textColor="@color/colorSky"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/difficultyValue"
+                    app:layout_constraintTop_toBottomOf="@id/txtTotalScore" />
+
+                <TextView
+                    android:id="@+id/layoutStreak"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/segoe"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Streak Index"
+                    android:textColor="@color/colorLightSliver"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="@id/streakValue"
+                    app:layout_constraintTop_toBottomOf="@id/streakValue" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/descriptionPick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/segoebold"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="Pick"
+            android:textColor="@color/colorSky"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/cardscoreboardTable" />
+
+
+        <TextView
+            android:id="@+id/descriptionDifficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/segoebold"
+            android:gravity="end"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="Difficulty index"
+            android:textColor="@color/colorSky"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toStartOf="@id/descriptionStreak"
+            app:layout_constraintStart_toEndOf="@id/descriptionPick"
+            app:layout_constraintTop_toBottomOf="@id/cardscoreboardTable" />
+
+        <TextView
+            android:id="@+id/descriptionStreak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:fontFamily="@font/segoebold"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="Streak Index"
+            android:textColor="@color/colorSky"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintTop_toBottomOf="@id/cardscoreboardTable" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleScoreBoardTable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/guideLine2"
+            app:layout_constraintStart_toStartOf="@id/guideLine1"
+            app:layout_constraintTop_toBottomOf="@id/descriptionPick" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_15sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLine2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_15sdp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

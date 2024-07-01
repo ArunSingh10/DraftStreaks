@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorHintWhite">#7Dffffff</color>
+    <color name="colorPrimaryDark">#FF000000</color>
+    <color name="colorPrimaryDarkTransperent">#BF000000</color>
+    <color name="colorSky">#00C5FF</color>
+    <color name="colorSkyBlue">#00A6D7</color>
+    <color name="colorDarkTurquoise">#305763</color>
+    <color name="colorCharcoalGray">#292929</color>
+    <color name="colorDarkSlateGray">#3A3A3C</color>
+    <color name="colorDeepSlateGray">#2C2C2C</color>
+    <color name="colorDeepAqua">#224A55</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+
+<!--//homethemestatusbar -->
+    <color name="colorPrimaryCharcoalStatusBarHome">#2B2B2B</color>
+    <color name="colorDrawerBg">#313131</color>
+    <color name="colorDrawerUserPcBg">#474747</color>
+    <color name="colorToolBar">#2B2B2B</color>
+    <color name="colorLightSliver">#EAEAEA</color>
+    <color name="colorShortbyBg">#2F2F2F</color>
+    <color name="colorSkyLite">#3300C5FF</color>
+    <color name="colorRed">#FF0000</color>
+
+
+
+
+
+
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryDark"
+    android:layout_marginTop="@dimen/_5sdp">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/colorDeepSlateGray"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="@dimen/_10sdp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp">
+
+
+            <TextView
+                android:id="@+id/textRankInWinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#1"
+                android:textColor="@color/colorSky"
+                android:textSize="@dimen/_14ssp"
+                android:textIsSelectable="false"
+                android:textAllCaps="false"
+                android:singleLine="true"
+                android:fontFamily="@font/segoe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardimageWinnerUser"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:strokeWidth="@dimen/_1sdp"
+                app:strokeColor="@color/colorDeepSlateGray"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/winnerName"
+                app:layout_constraintStart_toEndOf="@id/textRankInWinner">
+                <ImageView
+                    android:id="@+id/imageWinnerPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/image_player1"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="fitCenter"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/winnerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_player_name"
+                android:textColor="@color/colorLightSliver"
+                android:textSize="@dimen/_12ssp"
+                android:textIsSelectable="false"
+                android:textAllCaps="false"
+                android:singleLine="true"
+                android:gravity="center"
+                android:fontFamily="@font/segoe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/winnerPoints"
+                app:layout_constraintStart_toEndOf="@id/cardimageWinnerUser" />
+
+            <TextView
+                android:id="@+id/winnerPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500Pts"
+                android:textColor="@color/colorLightSliver"
+                android:textSize="@dimen/_12ssp"
+                android:textIsSelectable="false"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:fontFamily="@font/segoe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/winnerWonMoney"
+                app:layout_constraintStart_toEndOf="@id/winnerName" />
+
+            <TextView
+                android:id="@+id/winnerWonMoney"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Won $21,253"
+                android:textColor="@color/colorSky"
+                android:textSize="@dimen/_12ssp"
+                android:textIsSelectable="false"
+                android:textAllCaps="false"
+                android:singleLine="true"
+                android:gravity="center"
+                android:fontFamily="@font/segoe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

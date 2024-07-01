@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/imagePhone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:contentDescription="@string/app_name"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:src="@drawable/image_phone1"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_weight="5"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/rectangle_gradient"
+            android:backgroundTint="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_weight="2">
+
+
+            <TextView
+                android:id="@+id/layoutPredict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:elegantTextHeight="true"
+                android:fontFamily="@font/segoe"
+                android:text="@string/text_predict"
+                android:textAllCaps="false"
+                android:textColor="@color/colorSky"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/layoutFillYour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_fill_out_your"
+                android:elegantTextHeight="true"
+                android:textIsSelectable="false"
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/colorWhite"
+                android:textAllCaps="false"
+                android:fontFamily="@font/agencybold"
+                app:layout_constraintTop_toBottomOf="@id/layoutPredict"
+                app:layout_constraintStart_toStartOf="@id/layoutPredict"/>
+
+            <TextView
+                android:id="@+id/descriptionPredict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:fontFamily="@font/segoe"
+                android:text="@string/text_country_to_popular"
+                android:textAllCaps="false"
+                android:elegantTextHeight="true"
+                android:textIsSelectable="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@id/layoutFillYour"
+                app:layout_constraintTop_toBottomOf="@id/layoutFillYour" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

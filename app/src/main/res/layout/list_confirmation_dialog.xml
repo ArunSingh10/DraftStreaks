@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+
+        android:background="@drawable/confirmation_dialog_bg">
+
+        <TextView
+            android:id="@+id/textConfirmation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_confirmation"
+            android:textColor="@color/colorSky"
+            android:textSize="@dimen/_16ssp"
+            android:textIsSelectable="false"
+            android:textAllCaps="true"
+            android:padding="@dimen/_3sdp"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoebold"
+            android:gravity="center"
+            android:drawableBottom="@drawable/horizontal_sky_line"
+            android:drawableTint="@color/colorSky"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <ImageView
+            android:id="@+id/imageCloseDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/close_dialog_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/textMatchName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_match_name"
+            android:textColor="@color/colorLightSliver"
+            android:textSize="@dimen/_14ssp"
+            android:textIsSelectable="false"
+            android:textAllCaps="false"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoebold"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textConfirmation"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/textContestName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_contest_name"
+            android:textColor="@color/colorLightSliver"
+            android:textSize="@dimen/_12ssp"
+            android:textIsSelectable="false"
+            android:textAllCaps="false"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoe"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textMatchName"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+
+        <TextView
+            android:id="@+id/textWinningAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoe"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/text_winning_amount"
+            android:textAllCaps="false"
+            android:textColor="@color/colorLightSliver"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textContestName"
+            app:layout_constraintEnd_toStartOf="@id/textValueAmount"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/textValueAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoe"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="$ 20 M"
+            android:textAllCaps="false"
+            android:textColor="@color/colorSky"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textWinningAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <View
+            android:id="@+id/viewConf1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorLightSliver"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textContestName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/textSubTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_subtotal"
+            android:textColor="@color/colorLightSliver"
+            android:textSize="@dimen/_14ssp"
+            android:textIsSelectable="false"
+            android:textAllCaps="false"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoebold"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewConf1"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/textEntryFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_entry_fees"
+            android:textColor="@color/colorLightSliver"
+            android:textSize="@dimen/_12ssp"
+            android:textIsSelectable="false"
+            android:textAllCaps="false"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoe"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textSubTotal"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+        <TextView
+            android:id="@+id/feeAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoe"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="$ 20 "
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/colorLightSliver"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textEntryFee"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+
+        <View
+            android:id="@+id/viewConf2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/colorLightSliver"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textEntryFee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/textTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_total"
+            android:textColor="@color/colorLightSliver"
+            android:textSize="@dimen/_14ssp"
+            android:textIsSelectable="false"
+            android:textAllCaps="false"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoebold"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewConf2"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/totalFeeAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoe"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="$ 20 "
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="@color/colorLightSliver"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textTotal"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSubmitDraft"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/text_submit_draft"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_12ssp"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:elegantTextHeight="true"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_submit_draft_bg"
+            android:layout_marginVertical="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textTotal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

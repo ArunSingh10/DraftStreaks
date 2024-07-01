@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.joinContest.fragment.createLeague.createLeagueTab.CustomLeagueFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:nestedScrollingEnabled="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/listOfYour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elegantTextHeight="true"
+            android:fontFamily="@font/segoebold"
+            android:text="@string/list_of_your_custom_contests"
+            android:textColor="@color/colorWhite"
+            android:textIsSelectable="false"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/customContestRecycler"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/customContestRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/listOfYour"
+            android:visibility="gone">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonCreateContest">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/buttonCreateContest">
+
+
+
+                <TextView
+                    android:id="@+id/createYourCustom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:fontFamily="@font/segoebold"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:text="@string/text_create_your_custom"
+                    android:textColor="@color/colorWhite"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toTopOf="@id/layoutSport"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutSport"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:background="@color/colorToolBar"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/createYourCustom">
+
+                    <EditText
+                        android:id="@+id/editSport"
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@color/colorTransparent"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:hint="Sports"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text=""
+
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="LabelFor,TextFields" />
+
+                    <ImageView
+                        android:id="@+id/sportDropDown"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/image_dropdown"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/editSport"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutDraft"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/colorToolBar"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/layoutSport">
+
+                    <EditText
+                        android:id="@+id/editDraft"
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@color/colorTransparent"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:hint="@string/text_draft"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorWhite"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="LabelFor,TextFields" />
+
+                    <ImageView
+                        android:id="@+id/draftDropDown"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/image_dropdown"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/editDraft"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutEnterContestName"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/colorToolBar"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/layoutDraft">
+
+                    <EditText
+                        android:id="@+id/editEnterContestName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@color/colorTransparent"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:hint="@string/text_enter_your_contest_name"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorHintWhite"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="LabelFor,TextFields" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutEntryFee"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/colorToolBar"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/layoutEnterContestName">
+
+                    <EditText
+                        android:id="@+id/editEntryFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@color/colorTransparent"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:hint="@string/text_entry_fees"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorHintWhite"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="LabelFor,TextFields" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutWinningAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/colorToolBar"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/layoutEntryFee">
+
+                    <EditText
+                        android:id="@+id/editWinningAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@color/colorTransparent"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:hint="@string/text_winning_amount"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorHintWhite"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="LabelFor,TextFields" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutNumberSpots"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/colorToolBar"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/layoutWinningAmount">
+
+                    <EditText
+                        android:id="@+id/editNumberSpots"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@color/colorTransparent"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:hint="@string/text_number_of_spots"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorHintWhite"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="LabelFor,TextFields" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutNumberWinners"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/colorToolBar"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/layoutNumberSpots">
+
+                    <EditText
+                        android:id="@+id/editNumberWinners"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@color/colorTransparent"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:hint="@string/text_number_of_winners"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorHintWhite"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="LabelFor,TextFields" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutTypeContest"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/colorToolBar"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintTop_toBottomOf="@id/layoutNumberWinners">
+
+                    <EditText
+                        android:id="@+id/editTypeContest"
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:backgroundTint="@color/colorTransparent"
+                        android:cursorVisible="true"
+                        android:focusable="true"
+                        android:hint="@string/text_type_of_contest"
+                        android:imeOptions="actionNext"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:padding="@dimen/_5sdp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorHintWhite"
+                        android:textSize="@dimen/_12ssp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="LabelFor,TextFields" />
+
+                    <ImageView
+                        android:id="@+id/typeContestDropDown"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/image_dropdown"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/editTypeContest"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:id="@+id/lt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorToolBar"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    app:layout_constraintTop_toBottomOf="@id/layoutTypeContest"
+                    app:layout_constraintStart_toStartOf="@id/guideLine1"
+                    app:layout_constraintEnd_toEndOf="@id/guideLine2">
+
+                    <TextView
+                        android:id="@+id/textSetAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_set_winning_amt"
+                        android:textColor="@color/colorLightSliver"
+                        android:fontFamily="@font/segoebold"
+                        android:textSize="@dimen/_12ssp"
+                        android:textIsSelectable="false"
+                        android:elegantTextHeight="true"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                    <TextView
+                        android:id="@+id/textRankFrom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_rank_from"
+                        android:textColor="@color/colorLightSliver"
+                        android:fontFamily="@font/segoe"
+                        android:textSize="@dimen/_10ssp"
+                        android:textIsSelectable="false"
+                        android:elegantTextHeight="true"
+                        android:gravity="start"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/textRankTo"
+                        app:layout_constraintBottom_toTopOf="@id/contenierRecycler"
+                        app:layout_constraintTop_toBottomOf="@id/textSetAmount"
+                        app:layout_constraintHorizontal_weight="1"/>
+                    <TextView
+                        android:id="@+id/textRankTo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_rank_to"
+                        android:textColor="@color/colorLightSliver"
+                        android:fontFamily="@font/segoe"
+                        android:textSize="@dimen/_10ssp"
+                        android:textIsSelectable="false"
+                        android:elegantTextHeight="true"
+                        android:gravity="start"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        app:layout_constraintStart_toEndOf="@id/textRankFrom"
+                        app:layout_constraintTop_toBottomOf="@id/textSetAmount"
+                        app:layout_constraintEnd_toStartOf="@id/textAmount"
+                        app:layout_constraintHorizontal_weight="1"/>
+
+
+                    <TextView
+                        android:id="@+id/textAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_amount"
+                        android:textColor="@color/colorLightSliver"
+                        android:fontFamily="@font/segoe"
+                        android:textSize="@dimen/_10ssp"
+                        android:textIsSelectable="false"
+                        android:elegantTextHeight="true"
+                        android:gravity="start"
+                        app:layout_constraintStart_toEndOf="@id/textRankTo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textSetAmount"
+                        app:layout_constraintHorizontal_weight="1"/>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/contenierRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:layout_constraintBottom_toTopOf="@id/addAmount"
+                        app:layout_constraintTop_toBottomOf="@id/textRankFrom">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/addAmount"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:background="@color/colorDarkTurquoise"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="center"
+                        android:padding="@dimen/_2sdp"
+                        android:text="Add"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/contenierRecycler" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLine1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/_15sdp" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideLine2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/_15sdp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonCreateContest"
+            style="@style/buttonSimple"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/stroke_with_otp_bg"
+            android:backgroundTint="@color/colorSky"
+            android:fontFamily="@font/segoebold"
+            android:text="@string/text_create_contest"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_50sdp"
+      android:paddingVertical="@dimen/_5sdp"
+      android:background="@color/colorPrimaryDark">
+     <androidx.cardview.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         app:cardBackgroundColor="@color/colorDeepSlateGray"
+         app:cardCornerRadius="@dimen/_5sdp"
+         app:cardElevation="0dp">
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+             <TextView
+                 android:id="@+id/textPick1"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:textColor="@color/colorWhite"
+                 android:gravity="center"
+                 android:textSize="@dimen/_14ssp"
+                 android:text="1"
+                 android:fontFamily="@font/segoebold"
+                 android:singleLine="true"
+                 android:elegantTextHeight="true"
+                 android:background="@color/colorSky"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintEnd_toStartOf="@id/imageTeamFlag"
+                 app:layout_constraintHorizontal_weight="0.2"/>
+             <ImageView
+                 android:id="@+id/imageTeamFlag"
+                 android:layout_width="0dp"
+                 android:layout_height="wrap_content"
+                 android:src="@drawable/image_teamlogo1"
+                 android:scaleType="fitCenter"
+                 android:paddingVertical="@dimen/_5sdp"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 android:background="@color/colorDrawerUserPcBg"
+                 app:layout_constraintEnd_toStartOf="@id/layoutSelectPlayer"
+                 app:layout_constraintStart_toEndOf="@+id/textPick1"
+                 app:layout_constraintHorizontal_weight="0.5"
+                 android:contentDescription="@string/app_name" />
+
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:id="@+id/layoutSelectPlayer"
+                 android:layout_width="0dp"
+                 android:layout_height="match_parent"
+                 android:background="@color/colorDeepSlateGray"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toEndOf="@id/imageTeamFlag"
+                 app:layout_constraintHorizontal_weight="1">
+                 <TextView
+                     android:id="@+id/textPlayerName"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:textColor="@color/colorLightSliver"
+                     android:textSize="@dimen/_14ssp"
+                     android:text=""
+                     android:hint="Select Player"
+                     android:gravity="start|center_vertical"
+                     android:paddingStart="@dimen/_20sdp"
+                     android:paddingEnd="@dimen/_3sdp"
+                     android:textColorHint="@color/colorHintWhite"
+                     android:fontFamily="@font/segoe"
+                     android:singleLine="true"
+                     android:elegantTextHeight="true"
+
+                     app:layout_constraintStart_toStartOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintEnd_toStartOf="@id/imageRadioButtonPlayerName"
+                     app:layout_constraintHorizontal_weight="1"/>
+                 <ImageView
+                     android:id="@+id/imageRadioButtonPlayerName"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     android:gravity="center"
+                     android:src="@drawable/select_radio"
+                     android:visibility="gone"
+                     app:layout_constraintStart_toEndOf="@id/textPlayerName"
+                     app:layout_constraintHorizontal_weight="0.2"
+                     android:contentDescription="@string/app_name" />
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+     </androidx.cardview.widget.CardView>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

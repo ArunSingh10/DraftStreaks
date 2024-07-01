@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.home.activtiy.winnerDetailActivity.WinnerDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+    <include
+        android:id="@+id/toolBarWinnerDetailActivity"
+        layout="@layout/tool_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImgPlayerWinnerDetail"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/toolBarWinnerDetailActivity">
+
+                    <ImageView
+                        android:id="@+id/imagePlayerWinnerDeatil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/large_player_photo" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/winnerNameDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:elevation="0dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/segoebold"
+                    android:paddingHorizontal="@dimen/_25sdp"
+                    android:singleLine="true"
+                    android:text="Winner Name"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorLightSliver"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/cardImgPlayerWinnerDetail"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cardImgPlayerWinnerDetail"
+                    app:layout_constraintTop_toTopOf="@id/cardImgPlayerWinnerDetail" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/playerDescDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/cardImgPlayerWinnerDetail"
+                    app:layout_constraintTop_toBottomOf="@id/winnerNameDetail">
+
+                    <TextView
+                        android:id="@+id/playerProfessionDetail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="end"
+                        android:singleLine="true"
+                        android:text="Basect Ball Player"
+                        android:textColor="@color/colorLightSliver"
+                        android:textIsSelectable="false"
+
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/playerViewDetail"
+                        app:layout_constraintHorizontal_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:id="@+id/playerViewDetail"
+                        android:layout_width="@dimen/_1sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:background="@color/colorLightSliver"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/playerBelongCountryDetail"
+                        app:layout_constraintHorizontal_weight="0.2"
+                        app:layout_constraintStart_toEndOf="@id/playerProfessionDetail"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/playerBelongCountryDetail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_5sdp"
+                        android:elegantTextHeight="true"
+                        android:fontFamily="@font/segoe"
+                        android:gravity="start"
+                        android:singleLine="true"
+                        android:text="France"
+                        android:textColor="@color/colorLightSliver"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_weight="0.7"
+                        app:layout_constraintStart_toEndOf="@id/playerViewDetail"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardContestWinnerDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardBackgroundColor="@color/colorToolBar"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/scrollWinnerDetail"
+                    app:layout_constraintTop_toBottomOf="@id/cardImgPlayerWinnerDetail">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:paddingHorizontal="@dimen/_3sdp">
+
+                        <TextView
+                            android:id="@+id/contestValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/segoebold"
+                            android:gravity="start"
+                            android:text="31"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintEnd_toStartOf="@id/matchesValue"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/matchesValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/segoebold"
+                            android:inputType="number"
+                            android:text="35"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintEnd_toStartOf="@id/seriesValue"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toEndOf="@id/contestValue"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="HardcodedText,TextViewEdits" />
+
+                        <TextView
+                            android:id="@+id/seriesValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/segoebold"
+                            android:text="5"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintEnd_toStartOf="@id/sportValue"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toEndOf="@id/matchesValue"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/sportValue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/segoebold"
+                            android:text="2"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toEndOf="@id/seriesValue"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:id="@+id/contestText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.7"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="start"
+                            android:text="Contests"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintEnd_toStartOf="@id/matchesText"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/contestValue"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/matchesText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.8"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="start"
+                            android:text="Matches"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintEnd_toStartOf="@id/seriesText"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toEndOf="@id/contestText"
+                            app:layout_constraintTop_toBottomOf="@id/matchesValue" />
+
+                        <TextView
+                            android:id="@+id/seriesText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.8"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/segoe"
+                            android:text="Series"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintEnd_toStartOf="@id/sportText"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toEndOf="@id/matchesText"
+                            app:layout_constraintTop_toBottomOf="@id/seriesValue" />
+
+                        <TextView
+                            android:id="@+id/sportText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.8"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:fontFamily="@font/segoe"
+                            android:text="Sports"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_weight="1"
+                            app:layout_constraintStart_toEndOf="@id/seriesText"
+                            app:layout_constraintTop_toBottomOf="@id/sportValue" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+        <ScrollView
+            android:id="@+id/scrollWinnerDetail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@+id/cardContestWinnerDetail">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardWinnerDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorToolBar"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardWinnerPlayer"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imgPlayerIn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/app_name"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/large_player_photo" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/winnerNameInDetail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:focusable="false"
+                            android:fontFamily="@font/segoe"
+                            android:singleLine="true"
+                            android:text="Winner Name"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorLightSliver"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/cardWinnerPlayer"
+                            app:layout_constraintStart_toStartOf="@id/cardWinnerPlayer"
+                            app:layout_constraintTop_toBottomOf="@id/cardWinnerPlayer" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/c1"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            app:cardBackgroundColor="@color/colorPrimaryDark"
+                            app:cardCornerRadius="@dimen/_7sdp"
+                            app:layout_constraintEnd_toEndOf="@id/winnerNameInDetail"
+                            app:layout_constraintStart_toStartOf="@id/winnerNameInDetail"
+                            app:layout_constraintTop_toBottomOf="@id/winnerNameInDetail"
+                            app:strokeColor="@color/colorSky"
+                            app:strokeWidth="@dimen/_1sdp">
+
+                            <TextView
+                                android:id="@+id/skillScoreValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:elegantTextHeight="true"
+                                android:fontFamily="@font/segoebold"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="575"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_14ssp"
+                                tools:ignore="HardcodedText" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <TextView
+                            android:id="@+id/textContestDescValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="680"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c1"
+                            app:layout_constraintStart_toStartOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/c1"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/textMatchDescValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="180"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c1"
+                            app:layout_constraintStart_toStartOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/textContestDescValue"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/textSeriesDescValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="58"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c1"
+                            app:layout_constraintStart_toStartOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/textMatchDescValue"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/textSportDescValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="3"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c1"
+                            app:layout_constraintStart_toStartOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/textSeriesDescValue"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/textPlayingDateValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoebold"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="19 Jun"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c1"
+                            app:layout_constraintStart_toStartOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/textSportDescValue"
+                            tools:ignore="HardcodedText" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardSelfUser"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imgSelfUser"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/app_name"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/large_player_photo" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <TextView
+                            android:id="@+id/selfUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:elegantTextHeight="true"
+                            android:elevation="0dp"
+                            android:focusable="false"
+                            android:fontFamily="@font/segoe"
+                            android:singleLine="true"
+                            android:text="You"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorRed"
+                            android:textIsSelectable="false"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/cardSelfUser"
+                            app:layout_constraintStart_toStartOf="@id/cardSelfUser"
+                            app:layout_constraintTop_toBottomOf="@id/cardSelfUser" />
+
+
+                        <TextView
+                            android:id="@+id/textSkill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Skills Score"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="@id/c2"
+                            app:layout_constraintEnd_toStartOf="@id/c2"
+                            app:layout_constraintStart_toEndOf="@id/c1"
+                            app:layout_constraintTop_toTopOf="@id/c1" />
+
+
+                        <TextView
+                            android:id="@+id/textContestDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Contests"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toStartOf="@id/c2"
+                            app:layout_constraintStart_toEndOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/textSkill"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/textMatchesDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Matches"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toStartOf="@id/c2"
+                            app:layout_constraintStart_toEndOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/textContestDesc" />
+
+
+                        <TextView
+                            android:id="@+id/textSeriesDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Series"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toStartOf="@id/c2"
+                            app:layout_constraintStart_toEndOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/textMatchesDesc" />
+
+
+                        <TextView
+                            android:id="@+id/textSportsDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Sports"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toStartOf="@id/c2"
+                            app:layout_constraintStart_toEndOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/textSeriesDesc" />
+
+
+                        <TextView
+                            android:id="@+id/textPlayingSince"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="Playing Since"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toStartOf="@id/c2"
+                            app:layout_constraintStart_toEndOf="@id/c1"
+                            app:layout_constraintTop_toBottomOf="@id/textSportsDesc" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/c2"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            app:cardBackgroundColor="@color/colorPrimaryDark"
+                            app:cardCornerRadius="@dimen/_7sdp"
+                            app:layout_constraintEnd_toEndOf="@id/selfUserName"
+                            app:layout_constraintStart_toStartOf="@id/selfUserName"
+                            app:layout_constraintTop_toBottomOf="@id/selfUserName"
+                            app:strokeColor="@color/colorRed"
+                            app:strokeWidth="@dimen/_1sdp">
+
+                            <TextView
+                                android:id="@+id/skillScoreValueYou"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:elegantTextHeight="true"
+                                android:fontFamily="@font/segoebold"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="275"
+                                android:textAllCaps="false"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/_14ssp" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <TextView
+                            android:id="@+id/textContestDescYou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="100"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c2"
+                            app:layout_constraintStart_toStartOf="@id/c2"
+                            app:layout_constraintTop_toBottomOf="@id/c2"
+                            tools:ignore="HardcodedText" />
+
+
+                        <TextView
+                            android:id="@+id/textMatchDescYou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="55"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c2"
+                            app:layout_constraintStart_toStartOf="@id/c2"
+                            app:layout_constraintTop_toBottomOf="@id/textContestDescYou"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/textSeriesDescYou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="10"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c2"
+                            app:layout_constraintStart_toStartOf="@id/c2"
+                            app:layout_constraintTop_toBottomOf="@id/textMatchDescYou"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/textSportsDescYou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoe"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="3"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c2"
+                            app:layout_constraintStart_toStartOf="@id/c2"
+                            app:layout_constraintTop_toBottomOf="@id/textSeriesDescYou"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/textPlayingDescYou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:elegantTextHeight="true"
+                            android:fontFamily="@font/segoebold"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="3 July"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="@id/c2"
+                            app:layout_constraintStart_toStartOf="@id/c2"
+                            app:layout_constraintTop_toBottomOf="@id/textSportsDescYou"
+                            tools:ignore="HardcodedText" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/recentlyPlayedDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:elevation="0dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/segoe"
+                    android:singleLine="true"
+                    android:text="Recently Played"
+                    android:textAllCaps="false"
+                    android:gravity="start"
+                    android:textColor="@color/colorLightSliver"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardWinnerDetail"
+                    tools:ignore="HardcodedText" />
+
+
+                <TextView
+                    android:id="@+id/viewAllDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elegantTextHeight="true"
+                    android:elevation="0dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/segoe"
+                    android:singleLine="true"
+                    android:text="View all"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorSky"
+                    android:textIsSelectable="false"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardWinnerDetail" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerWinnerDetail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recentlyPlayedDetail"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
